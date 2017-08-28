@@ -1,0 +1,55 @@
+{
+  "name": "jest-file-switcher",
+  "displayName": "Jest File Switcher",
+  "description": "Easily switch between source files, mocks, and tests.",
+  "version": "0.0.1",
+  "publisher": "dustinmartin",
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.goToTest",
+    "onCommand:extension.goToSource"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.goToTest",
+        "title": "Go to Test"
+      },
+      {
+        "command": "extension.goToSource",
+        "title": "Go to Source"
+      },
+      {
+        "command": "extension.goToMock",
+        "title": "Go to Mock"
+      },
+      {
+        "command": "extension.toggleSourceAndMock",
+        "title": "Toggle Source and Mock"
+      },
+      {
+        "command": "extension.toggleSourceAndTest",
+        "title": "Toggle Source and Test"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "chai": "^4.1.1",
+    "eslint": "^3.6.0",
+    "mocha": "^2.3.3",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  }
+}
